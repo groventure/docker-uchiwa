@@ -1,0 +1,29 @@
+{
+  "uchiwa": {
+    "host": "0.0.0.0",
+    "port": {{ PORT }},
+    "refresh": {{ REFRESH }},
+    "users": [
+      {
+        "username": "admin",
+        "password": "admin",
+        "role": {
+          "readonly": false
+        }
+      }
+    ]
+  },
+  "sensu": [
+    {
+      "name": "API Name",
+      "host": "{{ SENSU_API_PORT_4567_TCP_ADDR }}",
+      "port": 4567,
+      "ssl": false,
+      "insecure": true,
+      "path": "",
+      "timeout": 5,
+      "user": "{{ SENSU_API_ENV_API_USER }}",
+      "pass": "{{ SENSU_API_ENV_API_PASSWORD }}"
+    }
+  ]
+}
